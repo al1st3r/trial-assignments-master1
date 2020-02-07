@@ -15,10 +15,13 @@
       <!-- <img src="images/image1_01.jpg"> -->
     </div>
     <div class="description">
-      <nav class="nav-link">
+      <nav>
         <a href="" class="nav-link">Каталог</a>
+        <a href="" class="nav-link-arrow"><img src="images/gray_arrow.png"></a>
         <a href="" class="nav-link">Женщинам</a>
+        <a href="" class="nav-link-arrow"><img src="images/gray_arrow.png"></a>
         <a href="" class="nav-link">...</a>
+        <a href="" class="nav-link-arrow"><img src="images/gray_arrow.png"></a>
         <a href="" class="nav-link">Кроссовки</a>
       </nav>
       <p class="product_name">РУБАШКА MEDICINE</p>
@@ -47,12 +50,17 @@
       <div class="buttons">
         <div class="button_1">В МАГАЗИН</div>
         <div class="button_2">В ИЗБРАННОЕ</div>
+        <div class="button_3"></div>
       </div>
       <div class="about">Рубашка Medicine выполнена из вискозной ткани с клетчатым узором.
         <br>
         Детали: прямой крой; отложной воротник; планка и манжеты на пуговицах;
         карман на груди.</div>
-
+        <div class="collapse">
+          <p class="collapse__text">Подробнее</p>
+          <div class="collapse__arrow"></div>
+        </div>
+       <p class="collapse-content">item info</p>
       <div class="social_networks">
         <div class="share">ПОДЕЛИТЬСЯ:</div>
         <div class="sprite fb_share"></div>
@@ -64,6 +72,14 @@
       </div>
     </div>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".collapse").click(function(){
+    $(".collapse-content").toggle(1000);
+  });
+});
+</script>
 </body>
 
 </html>
