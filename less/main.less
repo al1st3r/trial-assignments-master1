@@ -17,20 +17,17 @@ body {
 
 @import "blocks/layout";
 
-.wrapper {
-  background: #ffffff;
-
-}
-
 .carousel {
-  width: 749px;
-  background: url(..//images/image1_01.jpg);
+  width: 50%;
+  height: auto;
+  background: url(..//images/image1_01.jpg) no-repeat;
 
 }
 
 .product {
   display: flex;
   flex-direction: row;
+  width: 100%;
 
 }
 
@@ -62,7 +59,7 @@ body {
 .description {
   // height: 455px;
   margin-top: 78px;
-  width: 500px;
+  width: 50%;
   display: flex;
   flex-direction: column;
 
@@ -96,6 +93,7 @@ nav {
   justify-content: space-between;
   width: 339px;
   margin: 0;
+  // margin-bottom: 50px;
 }
 
 .prices {
@@ -142,8 +140,9 @@ nav {
   font-size: 13px;
   flex-direction: column;
   align-items: flex-start;
-  width: 317px;
+  width: 339px;
   margin-top: 20px;
+  box-sizing: border-box;
 
   .stock {
     display: flex;
@@ -278,6 +277,14 @@ nav {
   font-size: 13px;
   color: #9a9b9b;
   padding-top: 8.5px;
+}
+
+.collapse {
+  display: none;
+}
+
+.collapse-content {
+  display: none;
 }
 
 
@@ -450,5 +457,113 @@ nav {
     background: url(..//images/collapse_arrow.png) no-repeat;
     width: 12px;
     height: 8px;
+  }
+}
+
+@media screen and(max-width: 1000px) and (min-width: 768px) {
+ 
+  .carousel {
+    background: url(..//images/carousel_1000.jpg) no-repeat;
+  }
+
+  .description {
+    width: 339px;
+  }
+
+  .buttons {
+    width: 339px;
+  }
+
+  .about {
+    width: 430px;
+  }
+}
+
+@media screen and(max-width: 768px) and (min-width: 320px) {
+
+  .carousel {
+    background: url(..//images/carousel_768.jpg) no-repeat;
+  } 
+
+  .description {
+    width: 37%;
+    margin-top: 30px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    margin-right: 10px;
+  }
+
+  .nav-link-arrow {
+    margin-right: 10px;
+  }
+
+  .product_name {
+    margin-top: 25px;
+  }
+
+  .similar {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .similar_products {
+    margin-left: 0;
+    margin-bottom: 15px;
+    
+  }
+
+  .prices {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: start;
+  }
+
+  .price_with_promocode {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .current_price {
+    margin-right: 150px;
+  }
+
+  .promocode {
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+
+  .box {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .buttons {
+    margin-top: 30px;
+  }
+  .share {
+    display: none;
+  }
+
+  .about {
+    width: 100%;
+    margin-top: 30px;
+
+  }
+
+  .social_networks {
+    margin-top: 30px;
+  }
+
+  .sprite.fb_share {
+    margin-left: 0;
   }
 }
