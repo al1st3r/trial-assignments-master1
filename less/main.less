@@ -19,6 +19,7 @@ body {
 
 .carousel {
   width: 50%;
+  // min-width: 60%;
   height: auto;
   background: url(..//images/image1_01.jpg) no-repeat;
 
@@ -40,6 +41,17 @@ body {
   text-transform: uppercase;
   margin-top: 0;
 
+}
+
+
+.similar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 339px;
+  margin: 0;
+  // margin-bottom: 50px;
+  flex-basis: 33%;
 }
 
 .similar_products {
@@ -86,15 +98,6 @@ nav {
   height: 5px;
 }
 
-
-.similar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 339px;
-  margin: 0;
-  // margin-bottom: 50px;
-}
 
 .prices {
   display: flex;
@@ -493,13 +496,14 @@ nav {
   nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    // justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
   }
 
   .nav-link {
     margin-right: 10px;
+    margin-bottom: 5px;
   }
 
   .nav-link-arrow {
@@ -513,11 +517,13 @@ nav {
   .similar {
     width: 100%;
     flex-wrap: wrap;
+    margin-bottom: 5px;
   }
 
   .similar_products {
     margin-left: 0;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    margin-right: 5px;
     
   }
 
@@ -533,7 +539,7 @@ nav {
   }
 
   .current_price {
-    margin-right: 150px;
+    flex-basis: 70%;
   }
 
   .promocode {
