@@ -11,30 +11,25 @@
 
 <body>
   <div class="product">
-    <div class="carousel">
-      <!-- <img src="images/image1_01.jpg"> -->
-    </div>
+    <div class="carousel"></div>
     <div class="description">
       <nav>
         <a href="" class="nav-link">Каталог</a>
-        <a href="" class="nav-link-arrow"><img src="images/gray_arrow.png"></a>
         <a href="" class="nav-link">Женщинам</a>
-        <a href="" class="nav-link-arrow"><img src="images/gray_arrow.png"></a>
         <a href="" class="nav-link">Обувь</a>
-        <a href="" class="nav-link-arrow"><img src="images/gray_arrow.png"></a>
         <a href="" class="nav-link">Кроссовки</a>
       </nav>
-      <p class="product_name">РУБАШКА MEDICINE</p>
+      <h2 class="product_name">Рубашка MEDICINE</h2>
       <div class="similar">
-        <a href="/shirtsmedicine" class="similar_products">Рубашки Medicine</a>
-        <a href="/allmodelsmedicine" class="similar_products">Все модели Medicine</a>
-        <a href="/shirts" class="similar_products">Рубашки</a>
+        <a href="/shirtsmedicine" class="similar__products">Рубашки Medicine</a>
+        <a href="/allmodelsmedicine" class="similar__products">Все модели Medicine</a>
+        <a href="/shirts" class="similar__products">Рубашки</a>
       </div>
       <div class="prices">
-        <div class="last_price">2 699</div>
-        <div class="current_price">2 499 &#8381; </div>
-        <div class="price_with_promocode">2 227 &#8381; </div>
-        <div class="promocode">— с промокодом</div>
+        <div class="prices__last_price">2 699</div>
+        <div class="prices__current_price">2 499 &#8381; </div>
+        <div class="prices__price_with_promocode">2 227 &#8381; </div>
+        <div class="prices__promocode">— с промокодом</div>
       </div>
       <div class="box">
         <div class="stock">
@@ -47,9 +42,9 @@
         </div>
       </div>
       <div class="buttons">
-        <div class="button_1">В МАГАЗИН</div>
-        <div class="button_2">В ИЗБРАННОЕ</div>
-        <div class="button_3"></div>
+        <button class="button_1">В МАГАЗИН</button>
+        <button class="button_2">В ИЗБРАННОЕ</button>
+        <button class="button_3"></button>
       </div>
       <div class="about">Рубашка Medicine выполнена из вискозной ткани с клетчатым узором.
         <br>
@@ -75,7 +70,7 @@
   <script>
     $(document).ready(function () {
       $(".collapse").click(function () {
-        $(".collapse-content").toggle(1000);
+        $(".collapse-content").toggle(500);
       });
     });
 

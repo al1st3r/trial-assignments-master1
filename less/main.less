@@ -18,7 +18,9 @@ body {
 @import "blocks/layout";
 
 .carousel {
-  width: 50%;
+  // width: 50%;
+  min-width: 60%;
+  max-width: 100%;
   // min-width: 60%;
   height: auto;
   background: url(..//images/image1_01.jpg) no-repeat;
@@ -44,29 +46,27 @@ body {
 }
 
 
-.similar {
+ .similar  {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 339px;
   margin: 0;
+  margin-bottom: 50px;
 
-}
-
-.similar_products {
+  &__products {
   font-family: Circe, sans-serif;
   font-weight: lighter;
   font-size: 13px;
   text-decoration: none;
   color: @color-blue;
-  margin-bottom: 50px;
   margin-left: 20px;
 }
 
-.similar_products:first-child {
+&__products:first-child {
   margin-left: 0;
 }
-
+}
 .description {
   // height: 455px;
   margin-top: 78px;
@@ -90,6 +90,16 @@ nav {
   color: #9a9b9b;
   text-decoration: none;
 
+  &:before {
+    content: url(..//images/gray_arrow.png);
+    width: 11px;
+    height: 5px;
+    margin-right: 6px;
+  }
+
+  &:first-child:before {
+    content: "";
+  }
 }
 
 .nav-link-arrow {
@@ -104,22 +114,22 @@ nav {
   width: 339px;
   justify-content: space-between;
 
-}
 
-.last_price {
+
+&__last_price {
   text-decoration: line-through;
   color: #c8c7c7;
   font-size: 18px;
 
 }
 
-.current_price {
+&__current_price {
   color: #9a9b9b;
   font-size: 18px;
   margin-left: 10px;
 }
 
-.price_with_promocode {
+&__price_with_promocode {
   font-size: 18px;
   font-weight: bold;
   color: #131313;
@@ -127,13 +137,13 @@ nav {
 
 }
 
-.promocode {
+&__promocode {
   color: #232323;
   font-size: 15px;
   // margin-left: 5px;
 
 }
-
+}
 .box {
   background-color: #f4f4f4;
   display: flex;
@@ -184,6 +194,8 @@ nav {
   display: flex;
   margin-top: 50px;
   width: 100%;
+  border-width: 0px;
+  height: 42px;
 
 
 
@@ -197,26 +209,32 @@ nav {
     text-align: center;
     font-size: 13px;
     font-weight: bold;
-    padding: 13.5px 0;
-    user-select: none;
+    border-width: inherit;
     cursor: pointer;
 
+    &:hover {
+      background-color: lighten(@color-blue, 20%);
+    }
   }
 
 
 
   .button_2 {
+
+    background-color: #ffffff;
     border-radius: 0;
     width: 240px;
-    // height: 36px;
-    border: 2px solid grey;
+    border: 2px solid gray;
     text-align: center;
     margin-left: 20px;
     font-size: 13px;
     font-weight: bold;
-    padding: 11.5px 0;
-    user-select: none;
     cursor: pointer;
+    
+
+    &:hover {
+      background-color: lighten(@color-blue, 40%);
+    }
   }
 
   .button_3 {
@@ -327,7 +345,6 @@ nav {
   }
 
   .carousel {
-    // display: ;
     background: url(..//images/img1-lightbox.jpg) no-repeat;
     width: 320px;
     height: 450px;
@@ -339,13 +356,6 @@ nav {
     margin-top: 15px;
   }
 
-  .buttons {
-    order: 8;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 15px;
-  }
-
   .prices {
     display: flex;
     flex-wrap: wrap;
@@ -354,26 +364,29 @@ nav {
     margin-right: 15px;
     justify-content: flex-start;
     margin-top: 15px;
-  }
+  
 
-  .current_price {
+  &__current_price {
     margin-left: 0;
     margin-right: 150px;
   }
 
-  .current_price {
+  &__current_price {
     margin-left: 10px;
   }
 
-  .price_with_promocode {
+  &__price_with_promocode {
     margin-left: 0;
     margin-top: 5px;
   }
+
 
   .promocode {
     margin-left: 10px;
     margin-top: 5px;
   }
+
+}
 
   .similar {
     display: flex;
@@ -382,19 +395,22 @@ nav {
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 15px;
+    margin-bottom: 0;
 
-  }
+  
 
-  .similar_products {
+  &__products {
     margin-right: 30px;
     margin-left: 0;
     margin-bottom: 0;
     margin-top: 10px;
   }
+}
 
   .box {
     margin: 0;
     margin-top: 15px;
+    width: 100%;
   }
 
   .about {
@@ -405,6 +421,7 @@ nav {
   }
 
   .buttons {
+    order: 8;
     width: 290px;
     display: flex;
     flex-wrap: wrap;
@@ -417,14 +434,15 @@ nav {
 
     .button_1 {
       width: 290px;
+      height: 42px;
     }
 
     .button_2 {
       width: 236px;
+      height: 42px;
       margin: 0;
       margin-top: 20px;
       border-color: #d8d8d8;
-
     }
 
     .button_3 {
@@ -434,6 +452,7 @@ nav {
       width: 18px;
       margin-top: 10px;
       cursor: pointer;
+      border: none;
     }
   }
 
@@ -487,7 +506,7 @@ nav {
   }
 }
 
-@media screen and(max-width: 768px) and (min-width: 321px) {
+@media screen and(max-width: 767px) and (min-width: 321px) {
 
   .carousel {
     background: url(..//images/carousel_768.jpg) no-repeat;
@@ -523,20 +542,18 @@ nav {
     width: 100%;
     flex-wrap: wrap;
     margin-bottom: 5px;
-  }
+  
 
-  .similar_products {
+  &__products {
     margin-left: 0;
     margin-bottom: 10px;
     margin-right: 5px;
-
   }
-
+ }
   .prices {
     flex-wrap: wrap;
     width: 100%;
     justify-content: start;
-  }
 
   .price_with_promocode {
     margin-left: 0;
@@ -551,6 +568,8 @@ nav {
     margin-left: 5px;
     margin-top: 10px;
   }
+
+}
 
   .box {
     width: 100%;
